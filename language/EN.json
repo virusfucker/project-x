@@ -81,9 +81,9 @@
             "MUST_TEXT": "```Please reply to any message```"
         },
         "heroku": {
-            "RESTART_DESC": "Restart Julie",
+            "RESTART_DESC": "Restart",
             "RESTART_MSG": "```Restarting...```",
-            "SHUTDOWN_DESC": "Shutdown Julie",
+            "SHUTDOWN_DESC": "Shutdown",
             "SHUTDOWN_MSG": "```Shutting down ⛔```",
             "DYNO_DESC": "Check heroku dyno usage",
             "DYNO_TOTAL": "```Total Quota```",
@@ -246,11 +246,11 @@
             "UPDATE": "*Your bot is completely up-to-date!*",
             "NEW_UPDATE": "*New update available for Bot!*\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
-            "UPDATING": "Updating..🧞‍♂️",
+            "UPDATING": "Updating..🎁",
             "INVALID_HEROKU": "*❌ Your Heroku app name or api key wrong!*",
             "UPDATED": "*✅  Updated!*",
             "UPDATED_LOCAL": "*✅ Updated!*",
-            "AFTER_UPDATE": "*JulieMwol Restarting !*",
+            "AFTER_UPDATE": "*Restarting !*",
             "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
         },
         "whois": {
@@ -274,7 +274,7 @@
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
-            "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather Bakü```",
+            "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather kandy```",
             "LOCATION": "Location",
             "HMOD": "Finds mod apps from happymod",
             "QUOTE_DESC": "It shares famous quotes",
