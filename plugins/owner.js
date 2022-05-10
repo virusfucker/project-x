@@ -22,18 +22,29 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Julie.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    Julie.addCommand({pattern: 'alive', fromMe: true, desc: 'Lang.ALIVE_DESC'}, (async (message, match) => {
 
-        if (message.jid === '54218542512-1612300121@g.us') {
+    var a_plk =  "https://i.imgur.com/zdcqaaG.jpeg" ;
+    var BUTTHANDLE = '.';
+ 
 
-            return;
-        }
+    var logo = await axios.get (a_plk, { responseType: 'arraybuffer' })
+    var PIC = Buffer.from(logo.data)
 
-        if (Config.OWNER == 'default') {
-            await message.client.sendMessage(message.jid,'*JulieMwol by Farhan_Dqz*' , MessageType.text);
-        }
-        else {
-            await message.client.sendMessage(message.jid,Config.OWNER + '\n\n--------------------', MessageType.text);
-        }
-    }));
+    const media = await message.client.prepareMessage(message.jid, PIC, MessageType.image, { thumbnail: PIC })
+    
+    const buttons = [
+        {buttonId: BUTTHANDLE + 'qaversion', buttonText: {displayText: VER }, type: 1},
+        {buttonId: BUTTHANDLE + 'qasysstats', buttonText: {displayText: SYSDTXT }, type: 1}
+    ]
+    const buttonMessage = {
+        contentText: MSG,
+        footerText: 'Queen Jennifer © ᴘᴜʙʟɪᴄ ᴇᴅɪᴛɪᴏɴ',
+        buttons: buttons,
+        headerType: 4,
+        imageMessage: media.message.imageMessage    
+    }
+    await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage);
+     
+}));
 }
