@@ -1,6 +1,16 @@
 const Julie = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
+const {MessageType,Mimetype} = require('@adiwajshing/baileys');
+const {spawnSync} = require('child_process');
 const Config = require('../config');
+const chalk = require('chalk');
+const axios = require('axios');
+
+const Language = require('../language');
+const Lang = Language.getString('system_stats');
+
+const SYSDTXT = '💻 System status'
+const VER = '🧬 Version'
+const MSG = 'Hey There! Bot Online now. 💃🏻♥️```\n\n*Developer:* ```Ai Dark Ezio```\n\n*Official Website:* https://AiDarkEzio.github.io\n\n*Youtube channel :* https://youtube.com/channel/UCeDeaDD8dpdMT2gO3VHY1JQ\n\n```Thank You For Using Queen Jennifer💞'
 
 if (Config.WORKTYPE == 'private') {
 
@@ -22,9 +32,9 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Julie.addCommand({pattern: 'alive', fromMe: true, desc: 'Lang.ALIVE_DESC'}, (async (message, match) => {
+    Julie.addCommand({pattern: 'owner', fromMe: true, desc: 'Lang.ALIVE_DESC'}, (async (message, match) => {
 
-    var a_plk =  "https://i.imgur.com/zdcqaaG.jpeg" ;
+    var a_plk =  "https://telegra.ph/file/23a9e8b8369cd311dc434.jpg" ;
     var BUTTHANDLE = '.';
  
 
